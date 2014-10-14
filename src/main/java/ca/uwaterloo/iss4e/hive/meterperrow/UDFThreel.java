@@ -16,15 +16,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This is a simple UDAF that concatenates all arguments from different rows
- * into a single string.
+ * Copyright (c) 2014 Xiufeng Liu ( xiufeng.liu@uwaterloo.ca )
  * <p/>
- * It should be very easy to follow and can be used as an example for writing
- * new UDAFs.
+ * This file is free software: you may copy, redistribute and/or modify it
+ * under the terms of the GNU General Public License version 2
+ * as published by the Free Software Foundation.
  * <p/>
- * Note that Hive internally uses a different mechanism (called GenericUDAF) to
- * implement built-in aggregation functions, which are harder to program but
- * more efficient.
+ * This file is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * General Public License for more details.
+ * <p/>
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see http://www.gnu.org/licenses.
  */
 
 public class UDFThreel extends UDF {
