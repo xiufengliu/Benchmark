@@ -155,4 +155,25 @@ public class PAR implements Serializable {
         }
         return parameters;
     }
+
+    public static double [][] computeParameters3(final List<Double> readings, int order, int seasons) {
+        double[][] parameters = new double[seasons][];
+        try {
+            double[][] series = makeSeries2(readings, seasons);
+            for (int season = 0; season < series.length; ++season) {
+                double[] serie = series[season];
+                Pair pair = makePair(serie, order);
+                double[] Y = (double[]) pair.getKey();
+                double[][] X = (double[][]) pair.getValue();
+                OLSMultipleLinearRegression regression = new OLSMultipleLinearRegression();
+                // regression.setNoIntercept(true);
+                regression.newSampleData(Y, X);
+                double[] params = regression.estimateRegressionParameters();
+                parameters[season] = params;
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        return parameters;
+    }
 }
