@@ -47,7 +47,7 @@ public class UDTFPAR extends GenericUDTF {
 
     @Override
     public StructObjectInspector initialize(ObjectInspector[] args) throws UDFArgumentException {
-        if (args.length != 3) {
+        if (args.length != 2) {
             throw new UDFArgumentException("par() takes exactly two arguments, meterid and reading ");
         }
 

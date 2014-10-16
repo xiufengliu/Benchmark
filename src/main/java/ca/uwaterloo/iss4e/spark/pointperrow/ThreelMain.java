@@ -60,7 +60,11 @@ public final class ThreelMain implements Serializable {
 
         JavaSparkContext ctx = new JavaSparkContext(sparkConf);
 
+        final long startTime = System.currentTimeMillis();
         JavaRDD<String> lines = ctx.textFile(args[0]);
+        lines.cache();
+        final double duration = (System.currentTimeMillis() - startTime) / 1000.0;
+        System.out.println("Duration of caching is " + duration + " seconds.");
 
         JavaPairRDD<String, Iterable<Double>> stage1 = lines.mapToPair(new PairFunction<String, String, Double>() {
             @Override
