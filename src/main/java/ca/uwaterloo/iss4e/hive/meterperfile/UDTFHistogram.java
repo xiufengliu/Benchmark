@@ -45,6 +45,8 @@ public class UDTFHistogram extends GenericUDTF {
     private int preMeterID = -1;
 
 
+
+
     @Override
     public StructObjectInspector initialize(ObjectInspector[] args) throws UDFArgumentException {
         if (args.length != 2) {
