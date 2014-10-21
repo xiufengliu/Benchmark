@@ -37,6 +37,7 @@ The implementation programming languages are MATLAB for Matlab, plpgsql for MADl
 
 * *Spark and Hive*: Use the maven command *mvn package* to compile the Java program, and pack into a jar library.
 
+Go to the corresponding folder of each technology, and execute *./run.sh* for running the algorithms.
 
 #Reference
 [1] B. J. Birt, G. R. Newsham, I. Beausoleil-Morrison, M. M. Armstrong, N. Saldanha, and I. H. Rowlands, Disaggregating
