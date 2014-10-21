@@ -7,7 +7,7 @@ We select the following five representative technologies for the benchmarking, i
 
 * **MADlib** -- In-database (PostgreSQL) analytics library;
 
-* **System C** -- In-memory column store;
+* **System C** -- In-memory column store (the name is omitted due to license issue);
 
 * **Spark** -- Main memory based distributed computing framework;
 
