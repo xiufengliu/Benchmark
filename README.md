@@ -5,7 +5,7 @@ We have selected the following five representative technologies for the benchmar
 
 1. Matlab -- the traditional analytics tool
 
-2. MADlib + PostgreSQL -- In-database analytics library
+2. MADlib -- In-database (PostgreSQL) analytics library
 
 3. System C -- In-memory column store
 
