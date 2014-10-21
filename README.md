@@ -1,2 +1,2 @@
-Benchmarking of Smart Meter Data Analytics
+Benchmark of Smart Meter Data Analytics
 ==============
