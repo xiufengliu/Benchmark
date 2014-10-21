@@ -3,7 +3,7 @@ Benchmark of Smart Meter Data Analytics
 
 We have selected the following five representative technologies for the benchmarking, which are
 
-1. Matlab -- the traditional analytics tool
+1. Matlab -- A traditional analytics tool
 
 2. MADlib -- In-database (PostgreSQL) analytics library
 
@@ -11,5 +11,5 @@ We have selected the following five representative technologies for the benchmar
 
 4. Spark -- Main memory based distributed computing framework
 
-5. Hive -- Distributed data warehouse system on Hadoop
+5. Hive -- A distributed data warehouse system on Hadoop
 
