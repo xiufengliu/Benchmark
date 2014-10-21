@@ -27,16 +27,19 @@ We select the following four representative smart meter data analytics algorithm
 * **Cosine similarity** -- which is used to find groups of similar consumers, e.g., according to energy consumption;
  
 # Synthetic Data sets
--------------
 To use this benchmark, users could use this [data generator](https://github.com/xiufengliu/SmartMeterDataGenerator) to generate smart meter time series data.
 
 # Installation and Usage
----------------------
+
+The implementation programming languages are MATLAB for Matlab, plpgsql for MADlib, Q for System C, and Java for Spark and Hive. Following are the installation guidline:
+
+* *MADlib*: [MADlib](http://madlib.net/) library has first to be installed in PostgreSQL, then create the tables using the script for storing the time time series data, and finally install the functions of the benchmarking algorithms.
+
+* *Spark and Hive*: Use the maven command 'mvn package' to compile the Java program, and pack into a jar library.
 
 
 
 #Reference
------------------
 [1] B. J. Birt, G. R. Newsham, I. Beausoleil-Morrison, M. M. Armstrong, N. Saldanha, and I. H. Rowlands, Disaggregating
 Categories of Electrical Energy End-use from Whole-house Hourly Data, Energy and Buildings, 50:93-102, 2012.
 
