@@ -27,12 +27,16 @@ We select the following four representative smart meter data analytics algorithm
 * **Cosine similarity** -- which is used to find groups of similar consumers, e.g., according to energy consumption;
  
 # Synthetic Data sets
-
+-------------
 To use this benchmark, users could use this [data generator](https://github.com/xiufengliu/SmartMeterDataGenerator) to generate smart meter time series data.
+
+# Installation and Usage
+---------------------
 
 
 
 #Reference
+-----------------
 [1] B. J. Birt, G. R. Newsham, I. Beausoleil-Morrison, M. M. Armstrong, N. Saldanha, and I. H. Rowlands, Disaggregating
 Categories of Electrical Energy End-use from Whole-house Hourly Data, Energy and Buildings, 50:93-102, 2012.
 
