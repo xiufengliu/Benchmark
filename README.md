@@ -35,8 +35,7 @@ The implementation programming languages are MATLAB for Matlab, plpgsql for MADl
 
 * *MADlib*: [MADlib](http://madlib.net/) library has first to be installed in PostgreSQL, then create the tables using the script for storing the time time series data, and finally install the functions of the benchmarking algorithms.
 
-* *Spark and Hive*: Use the maven command 'mvn package' to compile the Java program, and pack into a jar library.
-
+* *Spark and Hive*: Use the maven command *mvn package* to compile the Java program, and pack into a jar library.
 
 
 #Reference
