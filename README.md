@@ -18,14 +18,17 @@ We select the following five representative technologies for the benchmarking, i
 
 We select the following four representative smart meter data analytics algorithms for the benchmarking, including:
 
-* **3-Line** -- The model of using three linear regression lines to fit the relationship between meter readings and weather temperatures, (see the paper [])
+* **3-Line** -- which is the model of using three linear regression lines to fit the relationship between meter readings and weather temperatures (see [1]);
 
-* **PAR** -- In-database (PostgreSQL) analytics library;
+* **PAR** -- which is a periodic auto-regression model for  extracting daily consumption trends that occur regardless of the outdoor temperature (see [2]);
 
-* **Histogram** -- In-memory column store;
+* **Histogram** -- which is used to  understand the consumption variability of an energy consumer;
+
+* **Cosine similarity** -- which is used to find groups of similar consumers, e.g., according to energy consumption;
  
-* **Cosine similarity** -- In-memory column store;
-* 
 
 #Reference
-[1] O. Ardakanian, N. Koochakzadeh, R. P. Singh, L. Golab, and S.Keshav, Computing Electricity Consumption Profiles from Household Smart Meter Data, in EnDM Workshop on Energy Data Management, pp.140-147, 2014.
+[1] B. J. Birt, G. R. Newsham, I. Beausoleil-Morrison, M. M. Armstrong, N. Saldanha, and I. H. Rowlands, Disaggregating
+Categories of Electrical Energy End-use from Whole-house Hourly Data, Energy and Buildings, 50:93-102, 2012.
+
+[2] O. Ardakanian, N. Koochakzadeh, R. P. Singh, L. Golab, and S.Keshav, Computing Electricity Consumption Profiles from Household Smart Meter Data, in EnDM Workshop on Energy Data Management, pp.140-147, 2014.
