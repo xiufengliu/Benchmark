@@ -1,17 +1,27 @@
 Benchmark of Smart Meter Data Analytics
 ==============
 
-We have selected the following five representative technologies for the benchmarking, which are
+We select the following five representative technologies for the benchmarking, including
 
-* **Matlab** -- A traditional analytics tool
+* **Matlab** -- A traditional analytics tool;
 
-* **MADlib** -- In-database (PostgreSQL) analytics library
+* **MADlib** -- In-database (PostgreSQL) analytics library;
 
-* **System C** -- In-memory column store
+* **System C** -- In-memory column store;
 
-* **Spark** -- Main memory based distributed computing framework
+* **Spark** -- Main memory based distributed computing framework;
 
-* **Hive** -- A distributed data warehouse system on Hadoop
+* **Hive** -- A distributed data warehouse system on Hadoop;
 
 
-*Matlab, MADlib*, and *System C* were benchmarked in a centralized environment, e.g., on a single server, while *Spark* and *Hive* were benchmarked in a distributed environment, e.g., multiple clustered servers.
+*Matlab, MADlib*, and *System C* are benchmarked in a centralized environment, e.g., on a single server, while *Spark* and *Hive* are benchmarked in a distributed environment, e.g., multiple clustered servers.
+
+We select the following four representative smart meter data analytics algorithms for the benchmarking, including:
+
+* **3-Line** -- The model of using three linear regression lines to fit the relationship between meter readings and weather temperatures, (see the paper [])
+
+* **PAR** -- In-database (PostgreSQL) analytics library;
+
+* **Histogram** -- In-memory column store;
+ 
+* **Cosine similarity** -- In-memory column store;
