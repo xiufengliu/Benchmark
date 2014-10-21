@@ -1,4 +1,4 @@
-function [ ] =main(ch, ddir)
+function [ ] =parmain(ch, ddir)
 %clear all;
 %clc;
 format long;

@@ -1,4 +1,4 @@
-function main(ch, ddir)
+function histmain(ch, ddir)
 %clear all;
 %clc;
 format long;

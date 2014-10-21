@@ -1,4 +1,4 @@
-function [ ] =main(ch,ddir)
+function [ ] =similaritymain(ch,ddir)
 homeidsim=csvread('/home/x362liu/datasets/homeidsim.csv');
 homeids=csvread(sprintf('/home/x362liu/datasets/homeids%c.csv', ch));
 m = length(homeidsim);

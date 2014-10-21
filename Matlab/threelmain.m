@@ -1,4 +1,4 @@
-function [ ] =main(ch, ddir)
+function [ ] =threelmain(ch, ddir)
 homeids=csvread(sprintf('/home/x362liu/datasets/homeids%c.csv', ch));
 n = length(homeids);
 results=zeros(n,6);
