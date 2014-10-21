@@ -25,3 +25,7 @@ We select the following four representative smart meter data analytics algorithm
 * **Histogram** -- In-memory column store;
  
 * **Cosine similarity** -- In-memory column store;
+* 
+
+#Reference
+[1] O. Ardakanian, N. Koochakzadeh, R. P. Singh, L. Golab, and S.Keshav, Computing Electricity Consumption Profiles from Household Smart Meter Data, in EnDM Workshop on Energy Data Management, pp.140-147, 2014.
