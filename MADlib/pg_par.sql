@@ -2,20 +2,20 @@
 
 -- DROP FUNCTION run_benchmark_par(integer, integer);
 
-CREATE OR REPLACE FUNCTION run_benchmark_par(seriesnum integer, windowsize integer)
+CREATE OR REPLACE FUNCTION run_benchmark_par(seriesnum integer, starttime timestamp, windowsize integer)
   RETURNS void AS
 $BODY$
 DECLARE
   	st TIMESTAMP;
 	ed TIMESTAMP;
 	r smas_meterids%rowtype;
-	starttime TIMESTAMP;
+	
 	endtime TIMESTAMP;
 BEGIN
 
 TRUNCATE TABLE smas_par_result;
-starttime := '2011-01-01 00:00:00'::timestamp;
-endtime := '2011-01-01 23:59:59'::timestamp + windowsize * interval '1 day';
+
+endtime := starttime + windowsize * interval '1 day';
 
 st:=clock_timestamp();
 	FOR r IN SELECT meterid FROM smas_meterids limit seriesnum
@@ -39,5 +39,3 @@ END
 $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION run_benchmark_par(integer, integer)
-  OWNER TO afancy;

@@ -1,4 +1,4 @@
-CREATE OR REPLACE FUNCTION run_benchmark_similarity(seriesnum integer, windowsize integer)
+CREATE OR REPLACE FUNCTION run_benchmark_similarity(seriesnum integer, starttime timestamp, windowsize integer)
   RETURNS void AS
 $BODY$
 DECLARE
@@ -10,7 +10,7 @@ DECLARE
   norm  float8:=0.0;
   normX  float8:=0.0;
   normY  float8:=0.0;
-  starttime timestamp;
+
   endtime timestamp;
   -------------
   st timestamp;
@@ -19,8 +19,7 @@ DECLARE
 BEGIN
 
 TRUNCATE smas_similarity_result;
-starttime := '2011-01-01 00:00:00'::timestamp;
-endtime := '2011-01-01 23:59:59'::timestamp + windowsize * interval '1 day';
+endtime := starttime + windowsize * interval '1 day';
 
 st:=clock_timestamp();
 	CREATE TEMPORARY Table temp_similarity (meterid1 integer, meterid2 integer, similarity float8) ON COMMIT DROP;
@@ -52,5 +51,3 @@ END
 $BODY$
   LANGUAGE plpgsql VOLATILE
   COST 100;
-ALTER FUNCTION run_benchmark_similarity(integer, integer)
-  OWNER TO afancy;
