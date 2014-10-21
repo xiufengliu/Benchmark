@@ -13,3 +13,5 @@ We have selected the following five representative technologies for the benchmar
 
 * **Hive** -- A distributed data warehouse system on Hadoop
 
+
+*Matlab, MADlib*, and *System C* run on a centralized environment, e.g., on a single server, while *Spark* and *Hive* run in a distributed environment, e.g., multiple clustered servers.
