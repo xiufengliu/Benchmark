@@ -1,7 +1,7 @@
 Benchmark of Smart Meter Data Analytics
 ==============
 
-We select the following five representative technologies for the benchmarking, including
+In this benchmark, we select the following five representative technologies for the benchmarking, including
 
 * **Matlab** -- A traditional analytics tool;
 
