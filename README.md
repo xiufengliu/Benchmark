@@ -39,6 +39,10 @@ The implementation programming languages are MATLAB for Matlab, plpgsql for MADl
 
 Go to the corresponding folder of each technology, and execute *./run.sh* for running the algorithms. Note: *the run.sh shell scripts needs to be customized according to user's sepcific settings.*
 
+Publication
+========================
+[Here](https://www.dropbox.com/s/9oqqka6zj2i6tmw/SmartMeterBenchmark.pdf?dl=0) is the paper accepted by [EDB 2015](http://edbticdt2015.be)
+
 #Reference
 [1] B. J. Birt, G. R. Newsham, I. Beausoleil-Morrison, M. M. Armstrong, N. Saldanha, and I. H. Rowlands, Disaggregating
 Categories of Electrical Energy End-use from Whole-house Hourly Data, Energy and Buildings, 50:93-102, 2012.
