@@ -48,3 +48,5 @@ Publication
 Categories of Electrical Energy End-use from Whole-house Hourly Data, Energy and Buildings, 50:93-102, 2012.
 
 [2] O. Ardakanian, N. Koochakzadeh, R. P. Singh, L. Golab, and S.Keshav, Computing Electricity Consumption Profiles from Household Smart Meter Data, in EnDM Workshop on Energy Data Management, pp.140-147, 2014.
+
+[3] M. Arlitt, et al. [IoTAbench: an Internet of Things Analytics benchmark](http://www.hpl.hp.com/techreports/2014/HPL-2014-75.pdf). In Proc. of ICPE, 2015.
