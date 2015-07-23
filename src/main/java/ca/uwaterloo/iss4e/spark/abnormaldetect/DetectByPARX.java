@@ -183,7 +183,7 @@ public final class DetectByPARX {
 
     public static void main(String[] args) {
         if (args.length != 5) {
-            System.out.println("java PARXStream <checkPointDir> <trainingDataDir> <streamDataDir> <DurationInSeconds> <epsilon>");
+            System.out.println("java DetectByPARX <checkPointDir> <trainingDataDir> <streamDataDir> <DurationInSeconds> <epsilon>");
             return;
         }
         String checkPointDir = args[0];
