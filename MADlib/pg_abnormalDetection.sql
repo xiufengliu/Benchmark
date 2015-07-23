@@ -79,7 +79,6 @@ $BODY$
 DECLARE
   	st TIMESTAMP;
 	ed TIMESTAMP;
-	r meterids%rowtype;
 BEGIN
 	TRUNCATE parx_parameters;
 	TRUNCATE normal_distribution;
