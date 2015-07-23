@@ -144,8 +144,6 @@ $BODY$
 DECLARE
 	st TIMESTAMP;
 	ed TIMESTAMP;
-	probability float8;
-	r meterids%rowtype;
 BEGIN
 	--TRUNCATE TABLE result;
 	DELETE FROM result WHERE readdate=$1;
@@ -180,7 +178,7 @@ BEGIN
 	) C, normal_distribution D
 	WHERE C.meterid=D.meterid AND D.stdev>0;
 
-	DELETE FROM result WHERE readdate=$1 AND probability>$2;
+	DELETE FROM result WHERE result.readdate=$1 AND result.probability>$2;
 	ed:=clock_timestamp();
 	RAISE NOTICE 'detect_byPARX time=%',ed-st;
 END
@@ -272,7 +270,7 @@ BEGIN
 	) E, normal_distribution D
 	WHERE E.meterid=D.meterid AND D.stdev>0;
 	
-	DELETE FROM result WHERE readdate=$1 AND probability>$2;
+	DELETE FROM result WHERE result.readdate=$1 AND result.probability>$2;
 
 	ed:=clock_timestamp();
 	RAISE NOTICE 'detect time=%',ed-st;
