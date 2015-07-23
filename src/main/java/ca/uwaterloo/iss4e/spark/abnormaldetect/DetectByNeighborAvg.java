@@ -303,7 +303,7 @@ public class DetectByNeighborAvg {
     }
 
     public static void main(String[] args) {
-        String usage = "NeighborStream [train|test] <neighborDataDir> <trainingDataDir> <modelDataDir> <checkPointDir> <streamDataDir> <outputDataDir> <durationInSeconds> <epsilon>";
+        String usage = "DetectByNeighborAvg [train|test] <neighborDataDir> <trainingDataDir> <modelDataDir> <checkPointDir> <streamDataDir> <outputDataDir> <durationInSeconds> <epsilon>";
         if (args.length != 9) {
             System.out.println(usage);
         }
