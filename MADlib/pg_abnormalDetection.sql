@@ -187,17 +187,17 @@ $BODY$
   
 -------------------------------------
 
-CREATE OR REPLACE FUNCTION training_byNeighborAvg(startdate date, enddate date)
+CREATE OR REPLACE FUNCTION public.training_neighbor_groupby(startdate date, enddate date)
   RETURNS void AS
 $BODY$
 DECLARE
 	st TIMESTAMP;
 	ed TIMESTAMP;
 BEGIN
-	TRUNCATE normal_distribution;
+	TRUNCATE distribution_neighbor;
 
 	st:=clock_timestamp();
-	INSERT INTO normal_distribution 
+	INSERT INTO distribution_neighbor 
 	SELECT 	meterid, 
 		avg(l2dist), 
 		stddev(l2dist)
@@ -210,7 +210,7 @@ BEGIN
 				B.readtime::date AS readdate,
 				extract(hour from B.readtime) AS season, 
 				B.reading AS myReading 
-			FROM  neighbors A, tstable B
+			FROM  (SELECT DISTINCT meterid FROM neighbors) A, tstable B
 			WHERE A.meterid=B.meterid AND  B.readtime::date between $1 and $2
 		) C,
 		(
@@ -220,10 +220,10 @@ BEGIN
 				avg(B.reading)  AS avgNeighborReading
 			FROM neighbors A, tstable B
 			WHERE A.neighbor=B.meterid AND A.meterid<>B.meterid AND B.readtime::date between $1 and $2
-			GROUP BY 1,2,3 ORDER BY 1,2,3
+			GROUP BY 1,2,3
 		) D
 		WHERE C.meterid=D.meterid AND C.readdate=D.readdate AND C.season=D.season
-		GROUP BY 1,2 ORDER BY 1,2
+		GROUP BY 1,2
 	) E GROUP BY 1;
 	ed:=clock_timestamp();
 	RAISE NOTICE 'training time=%',ed-st;
@@ -233,8 +233,7 @@ $BODY$
   COST 100;
 
 
-
-CREATE OR REPLACE FUNCTION detect_byNeighborAvg(today date, threshold double precision)
+CREATE OR REPLACE FUNCTION public.detect_neighbor_groupby(today date, threshold double precision)
   RETURNS void AS
 $BODY$
 DECLARE
@@ -262,11 +261,11 @@ BEGIN
 				extract(hour from B.readtime) AS season, 
 				avg(B.reading)  AS avgNeighborReading
 			FROM neighbors A, tstable B
-			WHERE A.neighbor=B.meterid AND A.meterid<>B.meterid AND B.readtime::date=$1 
-			GROUP BY 1, 2 ORDER BY 1,2
+			WHERE A.neighbor=B.meterid AND B.readtime::date=$1 
+			GROUP BY 1, 2
 		) D WHERE C.meterid=D.meterid AND extract(hour from C.readtime)=D.season AND C.readtime::date=$1
 		GROUP BY 1
-	) E, normal_distribution D
+	) E, distribution D
 	WHERE E.meterid=D.meterid AND D.stdev>0;
 	
 	DELETE FROM result WHERE result.readdate=$1 AND result.probability>$2;
