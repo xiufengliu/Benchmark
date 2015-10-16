@@ -41,7 +41,7 @@ Go to the corresponding folder of each technology, and execute *./run.sh* for ru
 
 Publication
 ========================
-X. Liu, L. Golab, W. Golab, I.~F.~Ilyas. Benchmarking Smart Meter Data Analytics. In Proc. of [EDBT](http://edbticdt2015.be), pp. 385--396, 2015. [PDF](http://openproceedings.org/2015/conf/edbt/paper-55.pdf)
+X. Liu, L. Golab, W. Golab, I. F. Ilyas. Benchmarking Smart Meter Data Analytics. In Proc. of [EDBT](http://edbticdt2015.be), pp. 385--396, 2015. [PDF](http://openproceedings.org/2015/conf/edbt/paper-55.pdf)
 
 #Reference
 [1] B. J. Birt, G. R. Newsham, I. Beausoleil-Morrison, M. M. Armstrong, N. Saldanha, and I. H. Rowlands, Disaggregating
