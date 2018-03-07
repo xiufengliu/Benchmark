@@ -42,7 +42,7 @@ Go to the corresponding folder of each technology, and execute *./run.sh* for ru
 Publication
 ========================
 
-#Reference
+# Reference
 [1] B. J. Birt, G. R. Newsham, I. Beausoleil-Morrison, M. M. Armstrong, N. Saldanha, and I. H. Rowlands, Disaggregating
 Categories of Electrical Energy End-use from Whole-house Hourly Data, Energy and Buildings, 50:93-102, 2012.
 
