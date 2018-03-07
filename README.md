@@ -41,6 +41,8 @@ Go to the corresponding folder of each technology, and execute *./run.sh* for ru
 
 Publication
 ========================
+* X. Liu, L. Golab, W. Golab, I. F. Ilyas, and S. Jin. Smart Meter Data Analytics: Systems, Algorithms and Benchmarking. ACM Transaction of Database System (TODS), 42(1), 2016.
+* X. Liu, L. Golab, W. Golab, Ihab F. Ilyas. Benchmarking Smart Meter Data Analytics. In Proc. of the 18th International Conference on Extending Database Technology (EDBT), pp. 385-396, 2015
 
 # Reference
 [1] B. J. Birt, G. R. Newsham, I. Beausoleil-Morrison, M. M. Armstrong, N. Saldanha, and I. H. Rowlands, Disaggregating
